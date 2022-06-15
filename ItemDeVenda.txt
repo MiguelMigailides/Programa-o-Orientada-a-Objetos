@@ -1,0 +1,52 @@
+package model;
+
+import java.util.Scanner;
+
+public class ItemDeVenda {
+	private Produto[] produto;
+	private int quantidade;
+	private double subTotal;
+	Produto p = new Produto("1","Samsung A20", "Smartphone", 10000, 7.8, 158.4, 74.7, 169);
+	Produto d = new Produto("2","Samsung A22", "Smartphone", 14000, 8.6, 160.4, 75.6, 158);
+	Scanner console = new Scanner(System.in);
+	
+	public double calcularSubTotal() {
+			return p.getPreco(0) * this.quantidade;
+	}
+	
+	public int atualizarProduto(Produto produto, int quantidade) {
+		int item = quantidade;
+		return item = item + quantidade;
+	}
+	
+	//Quantidade de produto comprado
+	public void setQuantidade(int valor) {
+		this.quantidade = this.quantidade + valor;		
+	}
+	
+	public Produto[] getProduto() {
+		return produto;
+	}
+	
+	public int getQuantidade() {
+		return quantidade;
+	}
+	
+	public double getSubTotal() {
+		return subTotal;
+	}
+
+	public Produto getP() {
+		return p;
+	}
+
+	public ItemDeVenda(Produto[] produto, Produto p) {
+		super();
+		this.produto = produto;
+		this.p = p;
+	}
+
+	public ItemDeVenda() {
+		
+	}
+}

@@ -1,0 +1,29 @@
+package model;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Produto p = new Produto("1","Samsung A20", "Smartphone", 10000, 7.8, 158.4, 74.7, 169);
+		ItemDeVenda item =  new ItemDeVenda();
+		
+		System.out.println("   ---Informações Técnicas do produto---\n");
+		System.out.println("Id: " + p.getIdProduto());
+		System.out.println("Nome: " + p.getNome());
+		System.out.println("Categoria: " + p.getCategoria());
+		System.out.println("Preço: " + p.getPreco(0));
+		System.out.println("Largura: " + p.getLargura() + "mm");
+		System.out.println("Altura: " + p.getAltura() + "mm");
+		System.out.println("Comprimento: " + p.getComprimento()  + "mm");
+		System.out.println("Peso: " + p.getPeso() + "g");
+		
+		System.out.println("\n\t---Estoque dos Produtos---\n");
+		item.setQuantidade(2);
+		System.out.println(item.getQuantidade());
+		item.atualizarProduto(p, 10);
+		System.out.println("Quantidade: " + item.atualizarProduto(p, 10));
+		
+		System.out.println("\n\t      ---SubTotal---\n");
+		System.out.println(item.calcularSubTotal());
+	}
+}
